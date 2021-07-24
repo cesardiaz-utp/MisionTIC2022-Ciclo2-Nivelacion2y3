@@ -21,7 +21,7 @@ public class Directivo extends Empleado {
 
     public void addSubordinado(Empleado empleado) throws Exception {
         if(numSubordinados == 10){
-            throw new Exception("No hay mas vacantes!!")
+            throw new Exception("No hay mas vacantes!!");
         }
         subordinados[numSubordinados] = empleado;
         empleado.setJefe(this);
