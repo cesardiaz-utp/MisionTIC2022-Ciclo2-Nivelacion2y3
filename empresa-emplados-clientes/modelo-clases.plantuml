@@ -1,0 +1,24 @@
+@startuml
+class Empresa {
+  - nit
+  - nombre
+}
+abstract class Persona{
+  - nombre
+  - edad
+  + mostrarDatos()
+}
+class Empleado extends Persona {
+  - sueldoBruto
+}
+class Cliente extends Persona {
+  - telefonoContacto
+}
+class Directivo extends Empleado {
+  - categoria
+}
+
+Empresa *-left- Empleado
+Empresa o-right- Cliente
+Directivo "1" -- "1..10" Empleado
+@enduml
